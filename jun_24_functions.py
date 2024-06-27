@@ -86,3 +86,78 @@ isMultipleOf(27)
 isMultipleOf(21)
 isMultipleOf(25)
 isMultipleOf(14)
+
+# Practice Exercise Answers
+
+# q1.  Write a function in python that takes in 3 numbers and returns the sum of all
+def sumAll(a,b,c):
+    sum = b + c + a
+    return sum
+
+def sumAll_2(a,b,c):
+    return a + b + c
+
+# q4. 4. Write a function in python that takes in 3 numbers and returns the average of all
+def avgAll(a, b, c):
+    sum = a + b + c
+    avg = sum / 3
+    return avg
+
+def avgAll_2(a, b, c):
+    return (a + b + c) / 3
+
+def avgAll_3(a, b, c):
+    sum = sumAll(a, b, c)
+    avg = sum / 3
+    return avg
+
+def avgAll_4(a, b, c):
+   return sumAll(a, b, c) / 3
+
+# q2. 2. Write a function in python that takes in 3 numbers and returns the max number of all
+
+def maxOfaAll(a, b, c):
+    # a: a > b and a > c
+    if a > b and a > c:
+        return a
+    
+    # b: b > a and b > c
+    if b > a and b > c:
+        return b 
+    
+    # c: c > a and c > b
+    if c > a and c > b:
+        return c
+    
+def maxOfaAll_2(a, b, c):
+    if a > b and a > c:
+        return a
+    elif  b > a and b > c:
+        return b 
+    elif c > a and c > b:
+        return c
+    else:
+        return None
+
+def maxOfaAll_3(a, b, c):
+    if a >= b and a >= c:
+        return a
+    elif  b >= a and b >= c:
+        return b 
+    elif c >= a and c >= b:
+        return c
+    else:
+        return None
+    
+def maxOfaAll_edmar(a, b, c):
+    if a >= b:
+        return a
+    elif b >= c:
+        return b
+    else:
+        return c        
+    
+maxOfaAll(21, 20 , 19)
+maxOfaAll(20, 20 , 19)
+
+maxOfaAll_edmar(23, 21, 30) # edge case # QA 
