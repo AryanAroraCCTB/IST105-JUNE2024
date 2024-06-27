@@ -159,5 +159,12 @@ def maxOfaAll_edmar(a, b, c):
     
 maxOfaAll(21, 20 , 19)
 maxOfaAll(20, 20 , 19)
+maxOfaAll(20, 20 , 19)
+maxOfaAll(20, 20 , 19)
+
+maxOfaAll(20, 20 , 19)
+maxOfaAll(20, 20 , 19)
+maxOfaAll(20, 20 , 19)
+maxOfaAll(20, 20 , 19)
 
 maxOfaAll_edmar(23, 21, 30) # edge case # QA 
