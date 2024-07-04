@@ -42,6 +42,9 @@ print(values)
 values['phone'] = '7781234567'
 print(values)
 
+# Add multiple keys-value pairs
+values.update({'last_name': 'smith', 'country': 'CANADA'})
+
 # Remove an existing key-value pair
 del values['phone']
 print(values)
