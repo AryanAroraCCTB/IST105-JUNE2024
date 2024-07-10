@@ -184,3 +184,57 @@ c1 = Circle(10, 'GREEN')
 print(c1.getRadius(), c1.getColor())
 print(c1.setRadius(21), c1.setColor('BLUE'))
 print(c1.getRadius(), c1.getColor())
+
+# Exercise
+# Create a Rectangle Class
+# Getters & Setters for sides
+# Helper methods: calculatePerimeter, calculateArea
+class Rectangle:
+    def __init__(self, length, width) -> None:
+        if isinstance(length, (int, float)) and isinstance(width, (int, float)): # error handling
+            self.__length = length
+            self.__width = width
+        else:
+            raise ValueError('Value has to be int or float')
+    
+    def __str__(self) -> str:
+        return f'Rectangle with Length: {self.__length}, Width: {self.__width}'
+    
+    # Getters
+    def getLength(self): return self.__length
+    def getWidth(self): return self.__width
+
+    # Setters
+    def setLength(self, length): 
+        if isinstance(length, (int, float)): # error handling
+            self.__length = length
+        else:
+            raise ValueError('Length has to be int or float')
+    def setWidth(self, width): 
+        if isinstance(width, (int, float)): # error handling
+            self.__width = width
+        else:
+            raise ValueError('Width has to be int or float')
+
+    # Helper Methods
+    def calculatePerimeter(self): return 2 * ( self.__length +  self.__width ) # 2 * (l + w)
+    def calculateArea(self): return self.__length * self.__width
+
+r1 = Rectangle(10, 11)
+print(f'R1 is {r1.getLength()} * {r1.getWidth()}')
+print(f'R1s perimeter is {r1.calculatePerimeter()}')
+print(f'R1s area is {r1.calculateArea()}')
+
+r1 = Rectangle(122, 101)
+print(f'R1 is {r1.getLength()} * {r1.getWidth()}')
+print(f'R1s perimeter is {r1.calculatePerimeter()}')
+print(f'R1s area is {r1.calculateArea()}')
+
+print('-------------------------')
+
+r1 = Rectangle(12, 10)
+print(r1)
+
+print('\n-------------------------\n')
+
+r1 = Rectangle(122, '101')
